@@ -15,12 +15,6 @@ def calcTwoZeroNumbers(a,b):
         checker = False
     return checker
 
-def calcInvalidInput(a,b):
-    if len(fish_list) > 10:
-        raise ValueError("A maximum of 10 fish can be added to the aquarium")
-    return {"tank_a": fish_list}
-
-
 class TestCalculator(unittest.TestCase):
     def test_two_pos(self):
         actual = calcTwoPositiveNumbers(1,2)
