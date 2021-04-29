@@ -2,15 +2,15 @@
 
 def calc(a,b):
     calcSum = a + b
-    print("Addition: {0}".format(calcSum))
+    # print("Addition: {0}".format(calcSum))
     calcSub = a - b
-    print("Subtraction: {0}".format(calcSub))
+    # print("Subtraction: {0}".format(calcSub))
     calcMul = a * b
-    print("Multiplication: {0}".format(calcMul))
+    # print("Multiplication: {0}".format(calcMul))
     calcDiv = a / b
-    print("Division: {0}".format(calcDiv))
+    # print("Division: {0}".format(calcDiv))
 
-    print([calcSum,calcSub,calcMul,calcDiv])
+    # print([calcSum,calcSub,calcMul,calcDiv])
 
     return [calcSum,calcSub,calcMul,calcDiv]
     # sumOfList = sum(calcList)
