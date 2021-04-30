@@ -1,23 +1,21 @@
 
 
-def calc(a,b):
-    calcSum = a + b
-    # print("Addition: {0}".format(calcSum))
-    calcSub = a - b
-    # print("Subtraction: {0}".format(calcSub))
-    calcMul = a * b
-    # print("Multiplication: {0}".format(calcMul))
-    calcDiv = a / b
-    # print("Division: {0}".format(calcDiv))
+class calc():
 
-    # print([calcSum,calcSub,calcMul,calcDiv])
-
-    return [calcSum,calcSub,calcMul,calcDiv]
-    # sumOfList = sum(calcList)
-
-    # print(sumOfList)
-
-# calc(3,3)
+    def add(a, b):
+        return a + b
+    
+    # Function to subtract two numbers 
+    def sub(a, b):
+        return a - b
+    
+    # Function to multiply two numbers
+    def mul(a, b):
+        return a * b
+    
+    # Function to divide two numbers
+    def div(a, b):
+        return a / b
 
 
 def main():

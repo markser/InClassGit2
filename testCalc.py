@@ -1,48 +1,57 @@
 import unittest
 from calc import calc
 
-# def calcTwoPositiveNumbers(a,b):
-#     return calc(a,b)
-
-# def calcTwoNegativeNumbers(a,b):
-#     return calc(a,b)
-
-# def calcTwoZeroNumbers(a,b):
-#     checker = True
-#     try:
-#         calc(a,b)
-#     except ZeroDivisionError:
-#         checker = False
-#     return checker
+# run with python3 command 
 
 class TestCalculator(unittest.TestCase):
-    def test_two_pos(self):
-        actual = calc(1,2)
-        expected = [3, -1, 2, 0]
+    def test_add_pass(self):
+        actual = calc.add(1,2)
+        expected = 3
         self.assertEqual(actual, expected)
     
-    def test_two_neg(self):
-        actual = calc(-8,-1)
-        expected = [-9, -7, 8, 8]
+    def test_add_fail(self):
+        actual = calc.add(1,2)
+        expected = -1
         self.assertEqual(actual, expected)
 
-    def test_two_zero(self):
-        # with self.assertRaises(ZeroDivisionError):
-            calc(0,0)
+    def test_sub_pass(self):
+        actual = calc.sub(1,2)
+        expected = -1
+        self.assertEqual(actual, expected)
+    
+    def test_sub_fail(self):
+        actual = calc.sub(1,2)
+        expected = 10
+        self.assertEqual(actual, expected)
+
+    def test_mul_pass(self):
+        actual = calc.mul(1,2)
+        expected = 2
+        self.assertEqual(actual, expected)
+    
+    def test_mul_fail(self):
+        actual = calc.mul(1,2)
+        expected = -1
+        self.assertEqual(actual, expected)
+
+    def test_div_pass(self):
+        actual = calc.div(1,2)
+        expected = 0.5
+        self.assertEqual(actual, expected)
+    
+    def test_div_fail(self):
+        actual = calc.div(1,2)
+        expected = 1
+        self.assertEqual(actual, expected)
+    
 
     def test_invalid_input(self):
-        # with self.assertRaises(TypeError):
-            calc("a","b")
+        with self.assertRaises(TypeError):
+            calc.add("a","b")
+            calc.sub("a","b")
+            calc.mul("a","b")
+            calc.div("a","b")
 
-    def test_two_pos_fail(self):
-        actual = calc(1,2)
-        expected = [3, -1, 2, 1]
-        self.assertEqual(actual, expected)
-    
-    def test_two_neg_fail(self):
-        actual = calc(-8,-1)
-        expected = [-9, -7, 2, 8]
-        self.assertEqual(actual, expected)
 
 
 
